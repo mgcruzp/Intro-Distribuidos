@@ -10,7 +10,7 @@ Este proyecto implementa un **sistema distribuido de cálculo matemático** util
 
 ---
 
-## 🚀 **Requisitos**
+##  **Requisitos**
 Antes de ejecutar el proyecto, asegúrate de tener instalado:
 
 - Python 3.8 o superior
@@ -39,12 +39,12 @@ Este comando generará:
 - `calculadora_pb2.py`
 - `calculadora_pb2_grpc.py`
 
-📌 **Estos archivos deben estar en el mismo directorio que los servidores y el cliente.**
+**Estos archivos deben estar en el mismo directorio que los servidores y el cliente.**
 
 ---
 
-## 🖥️ **Ejecutar los Servidores**
-### **1️⃣ En la Computadora de los Servidores (Ange)**
+## **Ejecutar los Servidores**
+### ** En la Computadora de los Servidores (Ange)**
 Ejecuta en **cuatro terminales diferentes**:
 
 ```sh
@@ -54,13 +54,13 @@ python3 servidor_avanzado.py
 python3 servidor_auxiliar.py
 ```
 
-📌 **Cada servidor se ejecuta en un puerto diferente:**
+ **Cada servidor se ejecuta en un puerto diferente:**
 - `50050` → Servidor de Cálculo
 - `50051` → Servidor Aritmético
 - `50052` → Servidor Avanzado
 - `50053` → Servidor Auxiliar
 
-### **2️⃣ En la Computadora del Cliente (Tú)**
+### ** En la Computadora del Cliente (Tú)**
 Ejecuta:
 
 ```sh
@@ -95,33 +95,10 @@ Resultado de raiz([25.0, 2.0]): 5.0
 
 ---
 
-## 🔄 **Tolerancia a Fallos**
+## **Tolerancia a Fallos**
 - Si un servidor falla (`servidor_aritmetico.py` o `servidor_avanzado.py`), el **servidor auxiliar** (`servidor_auxiliar.py`) **asumirá sus funciones** automáticamente.
 - El **servidor de cálculo** detectará fallos y redirigirá las operaciones al **servidor auxiliar**.
 - Una vez que un servidor principal se recupere, el sistema **vuelve a la normalidad**.
-
----
-
-## 🔥 **Solución de Problemas**
-Si el cliente **no se conecta**, verifica:
-1. **Los servidores están corriendo** (`ps aux | grep python3`).
-2. **Los puertos están abiertos** en la computadora de los servidores:
-   ```sh
-   sudo ufw allow 50050/tcp
-   sudo ufw allow 50051/tcp
-   sudo ufw allow 50052/tcp
-   sudo ufw allow 50053/tcp
-   ```
-3. **Prueba conectividad con `ping`** desde el cliente:
-   ```sh
-   ping 192.168.X.X
-   ```
-
----
-
-## 📜 **Autores**
-- **Tu Nombre** - Cliente y pruebas
-- **Ange** - Servidores y monitoreo
 
 ---
 
@@ -131,4 +108,3 @@ Si el cliente **no se conecta**, verifica:
 
 ---
 
-🚀 **¡Listo! Ahora puedes subir esto a tu repositorio GitHub.** 🎯
