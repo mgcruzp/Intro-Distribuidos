@@ -26,7 +26,7 @@ pip3 install grpcio grpcio-tools
 
 ---
 
-## ⚙️ **Generar Código gRPC**
+## **Generar Código gRPC**
 Antes de ejecutar el sistema, es necesario **compilar el archivo `.proto`** para generar los archivos de código gRPC.
 
 Ejecuta el siguiente comando dentro del directorio del proyecto:
