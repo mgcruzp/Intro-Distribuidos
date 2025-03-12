@@ -39,13 +39,9 @@ Este comando generará:
 - `calculadora_pb2.py`
 - `calculadora_pb2_grpc.py`
 
-**Estos archivos deben estar en el mismo directorio que los servidores y el cliente.**
-
 ---
 
 ## **Ejecutar los Servidores**
-### ** En la Computadora de los Servidores (Ange)**
-Ejecuta en **cuatro terminales diferentes**:
 
 ```sh
 python3 servidor_calculo.py
@@ -54,14 +50,7 @@ python3 servidor_avanzado.py
 python3 servidor_auxiliar.py
 ```
 
- **Cada servidor se ejecuta en un puerto diferente:**
-- `50050` → Servidor de Cálculo
-- `50051` → Servidor Aritmético
-- `50052` → Servidor Avanzado
-- `50053` → Servidor Auxiliar
-
-### ** En la Computadora del Cliente (Tú)**
-Ejecuta:
+### ** Ejecutar el cliente**
 
 ```sh
 python3 cliente.py
@@ -69,7 +58,7 @@ python3 cliente.py
 
 ---
 
-## 📡 **Cómo Usar el Cliente**
+##  **Cómo Usar el Cliente**
 Una vez que el cliente esté corriendo, puedes **ingresar operaciones** en la terminal.
 
 Ejemplo:
@@ -78,22 +67,6 @@ Ingrese la operación (sumar, restar, multiplicar, dividir, potencia, raiz) o 's
 Ingrese los números separados por espacio: 10 5
 Resultado de sumar([10.0, 5.0]): 15.0
 ```
-
-Ejemplo de **potencia**:
-```
-Ingrese la operación (sumar, restar, multiplicar, dividir, potencia, raiz) o 'salir' para terminar: potencia
-Ingrese la base y el exponente separados por espacio (ejemplo: 2 3 para 2^3): 2 3
-Resultado de potencia([2.0, 3.0]): 8.0
-```
-
-Ejemplo de **raíz**:
-```
-Ingrese la operación (sumar, restar, multiplicar, dividir, potencia, raiz) o 'salir' para terminar: raiz
-Ingrese el radicando y el índice separados por espacio (ejemplo: 25 2 para raíz cuadrada de 25): 25 2
-Resultado de raiz([25.0, 2.0]): 5.0
-```
-
----
 
 ## **Tolerancia a Fallos**
 - Si un servidor falla (`servidor_aritmetico.py` o `servidor_avanzado.py`), el **servidor auxiliar** (`servidor_auxiliar.py`) **asumirá sus funciones** automáticamente.
@@ -107,4 +80,3 @@ Resultado de raiz([25.0, 2.0]): 5.0
 - [Protocol Buffers Documentation](https://developers.google.com/protocol-buffers/)
 
 ---
-
