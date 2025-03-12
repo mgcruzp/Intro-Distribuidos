@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+service ServidorCalculo {
+    rpc DelegarOperacion (Operacion) returns (Resultado);
+}
+
+service ServidorAritmetico {
+    rpc Sumar (Operacion) returns (Resultado);
+    rpc Restar (Operacion) returns (Resultado);
+    rpc Multiplicar (Operacion) returns (Resultado);
+    rpc Dividir (Operacion) returns (Resultado);
+}
+
+service ServidorAvanzado {
+    rpc Potencia (Operacion) returns (Resultado);
+    rpc RaizCuadrada (Operacion) returns (Resultado);
+}
+
+service ServidorAuxiliar {
+    rpc EjecutarOperacion (Operacion) returns (Resultado);
+    rpc NotificarEstado (EstadoServidor) returns (Ack);
+}
+
+message Operacion {
+    string operacion = 1;
+    repeated float operandos = 2;
+}
+
+message Resultado {
+    float resultado = 1;
+}
+
+message EstadoServidor {
+    string servidor = 1;
+    bool activo = 2;
+}
+
+message Ack {
+    string mensaje = 1;
+}
