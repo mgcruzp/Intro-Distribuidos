@@ -75,7 +75,7 @@ Resultado de sumar([10.0, 5.0]): 15.0
 
 ---
 
-## 📎 **Referencias**
+## **Referencias**
 - [gRPC Python Documentation](https://grpc.io/docs/languages/python/)
 - [Protocol Buffers Documentation](https://developers.google.com/protocol-buffers/)
 
