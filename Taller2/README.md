@@ -50,7 +50,7 @@ python3 servidor_avanzado.py
 python3 servidor_auxiliar.py
 ```
 
-### **Ejecutar el cliente**
+## **Ejecutar el cliente**
 
 ```sh
 python3 cliente.py
